@@ -56,10 +56,16 @@ namespace Assignment_5
             Console.WriteLine("Welcome! {0}", accname);
             Console.WriteLine("Please enter pin to access your account");
             Pin = int.Parse(Console.ReadLine());
-            if (Pin == 1234) 
+            //try
+            {
+                if (Pin == 1234)
                 { Console.WriteLine("Select the action to continue the process:"); }
-            else { Console.WriteLine("Incorrect pin! Please check your pin and try again."); } 
-            action=int.Parse(Console.ReadLine());
+
+                else
+                { Console.WriteLine("Incorrect pin! Please check your pin and try again."); }
+            }
+           // catch(Exception) { Console.WriteLine("Unauthorised Access"); }
+            action=Convert.ToInt32(Console.ReadLine());
             if (action == 1) { bank.Bank_Balance(); }
             else if (action == 2) { bank.Deposite(); }
             else if (action == 3) { bank.Withdraw(); }
