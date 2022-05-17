@@ -34,7 +34,7 @@ namespace CodeBase_Test_2
             Console.WriteLine("sum = {0}",sum);
             calculator cal2 = new calculator(Subtractnum);
             int sub = cal2.Invoke(15,30);
-            Console.WriteLine("Prod = {0}", sub);
+            Console.WriteLine("sub = {0}", sub);
             calculator cal3 = new calculator(Multiplynum);
             int prod = cal3.Invoke(8,9);
             Console.WriteLine("prod = {0}", prod);
