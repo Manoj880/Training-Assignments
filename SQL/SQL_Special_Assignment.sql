@@ -1,97 +1,109 @@
-create database SQL_Spcl_Assignment
+create database SQL_Special_Assignment
 
-use SQL_Spcl_Assignment
+use SQL_Special_Assignment
 
--- Creating Client Table
+--Creating Clients Table
 
-create table Clients
-(Client_ID int primary key, Cname nvarchar(40) not null, Adress nvarchar(30), Email nvarchar(30) unique, Phone bigint,
+create table Clients(Client_ID int primary Key,Cname nvarchar(40) not null,
+Addres nvarchar(30),Email nvarchar(30) unique,phoneNo bigint,
 Business nvarchar(20) not null)
 
--- Inserting data into clients table
+ --inserting data into clients table
 insert into Clients
-values(1100, 'Skylark Corp','Delhi', 'admin@skylark.com',1800265689,'Reseller'),
-(1101, 'Oscorp', 'New York','Professional@oscorp.com',3249479515,'Professional'),
-(1102,'Stark Tech', 'DC','mfg@starktech.com',6833456982,'Manufacturer'),
-(1103,'SMR Consultants','Andhra Pradesh','consultant@smr.com',9000643819,'Consultant')
+values(1001,'ACME Utilities','Noida','contact@acmeutil.com',9567880032,'Manufacturing'),
+(1002,'Trackon Consultants','Mumbai','consult@trackon.com',8734210090,'Consultant'),
+(1003,'MoneySaver Distributors','Kolkata','save@moneysaver.com',7799886655,'Reseller'),
+(1004,	'Lawful Corp',	'Chennai',	'justice@lawful.com',	9210342219,	'Professional')
 
 select * from Clients
 
--- Creating Employee table
+ 
+ --creating Employees table
+
 
 create table Employees
-(Empno int primary key, Ename nvarchar(20) not null, Job nvarchar(15), Salary float check(Salary>0),
-Deptno int foreign key references Department(Deptno))
+(EmpNo int primary key,Ename varchar(20) not null,job varchar(15),
+salary float check(salary>0),
+DeptNo int foreign key references Departments(DeptNo))
 
--- Inserting Employee details into table
-
+  --inserting data into Employees table
 insert into Employees
-values(57501,'Sandhya','Developer',28500,111),
-(57502,'Manoj','Developer',40000,111),
-(57503,'Raja Sri','Designer',26000,101),
-(57504,'Sunny','Designer',28500,101),
-(57505,'Ramya','Tester',26500,121),
-(57506,'Devadas','Production Mgr',30000,131),
-(57507,'Anudeep','Analyst',28500,101),
-(57508,'Radha','Designer',30000,101),
-(57509,'Abhiya','Tester',33000,121),
-(57510,'Sumathi','QA Mgr',34000,121)
+ values
+(7001,'Sandeep','Analyst',25000,10),
+(7002,'Rajesh','Designer',30000,10),
+(7003,'Madhav','Developer',40000,20),
+(7004,'Manoj','Developer',40000,20),
+(7005,'Abhay','Designer',35000,10),
+(7006,'Uma','Tester',30000,30),
+(7007,'Gita','Tech.Writer',30000,40),
+(7008,'Priya','Tester',35000,30),
+(7009,'Nutan','Developer',45000,20),
+(7010,'Smita','Analyst',20000,10),
+(7011,'Anand','Project Mgr',65000,10)
 
-select * from Employees
+select *from Employees
 
+ -- Creating Departments table
 
--- Creating Department table
+create table Departments
+(DeptNo int primary key, Dname varchar(20) not null,Loc varchar(20))
 
-create table Department
-(Deptno int primary key, Dname nvarchar(20) not null, Locationn nvarchar(20))
+ --inserting data into departments table
 
--- Inserting data into Deparment table
+insert into Departments
+values(10,'Design','Pune'),
+(20,'Development','pune'),
+(30,'Testing','Mumbai'),
+(40,'Document','Mumbai')
 
-insert into Department
-values(101,'Design','Hyderabad'),
-(111,'Development','Mumbai'),
-(121,'QA','Bangalore'),
-(131,'Production','Kolkata')
+select* from Departments
 
-select * from Department
+ 
+-- Creating project tables
 
--- Creating Projects table
+create table Project
+(Project_ID int primary key,
+Descr varchar(30) not null,
+Start__Date date,
+Planned_End_Date date,
+Actual_End_Date date, Check(Actual_End_Date>Planned_End_Date),
+Budget bigint, Check(Budget>0),
+Client_Id int foreign key references Clients(Client_ID))
 
-create table project
-(Project_ID int primary key, Descr nvarchar(30) not null, Start_Date_ Date, Planned_End_Date Date,
-Actual_End_Date Date, check (Actual_End_Date > Planned_End_Date))
+-- inserting data into project table
 
--- Inserting Data into Project table
+insert into Project
+values
+(401,'Inventory','01-Apr-11','01-Oct-11','31-Oct-11',150000,1001),
+(402,'Accounting','01-Aug-11','01-Jan-12',null, 500000,1002),
+(403,'Payroll','01-Oct-11','31-Dec-11',null, 75000,1003),
+(404,'Contact Mgmt','01-Nov-11','31-Dec-11',null,50000,1004)
 
-insert into project
-values(201,'Accounting','19-Sep-2012','19-Apr-2013','05-May-2013'),
-(202,'Payroll','27-Apr-2012','19-Sep-2012','08-Oct-2012'),
-(203,'IT Mgmt','21-Mar-2012','22-Aug-2012','22-Nov-2012'),
-(204,'Inventory','24-Nov-2012','22-May-2013','10-Jun-2013')
+select* from Project
 
-select * from Project
+ -- create Table to ProjectTasks
 
+create table ProjectTasks
+(Project_Id int foreign key references project(project_ID),
+Empno int foreign key references Employees(EmpNo),
+Start__Date date, End_Date date, Task varchar(25) not null,
+Pro_status varchar(15) not null, primary key(Project_ID,Empno))
 
--- Creating ProjectTask Table
+ --inserting data into ProjectTasks
 
-create table ProjectTask
-(Project_ID int foreign key references Project(Project_ID),
-Empno int foreign key references Employees(Empno),
-primary key(Empno,Project_ID), Task nvarchar(30) not null,
-Start_Date_ date, End_Date date, Prj_Status nvarchar(15) not null)
+insert into ProjectTasks
+values
+(401,7001,'01-Apr-11','20-Apr-11','System Analysis','Completed'),
+(401,7002,'21-Apr-11','30-May-11','System Design','Completed'),
+(401,7003,'01-Jun-11','15-Jul-11','Coding','Completed'),
+(401,7004,'18-Jul-11','01-Sep-11','Coding',	'Completed'),
+(401,7006,'03-Sep-11','15-Sep-11','Testing','Completed'),
+(401,7009,'18-Sep-11','05-Oct-11','Code Change','Completed'),
+(401,7008,'06-Oct-11','16-Oct-11','Testing','Completed'),
+(401,7007,'06-Oct-11','22-Oct-11','Documentation','Completed'),
+(401,7011,'22-Oct-11','31-Oct-11','Sign off','Completed'),
+(402,7010,'01-Aug-11','20-Aug-11','System Analysis','Completed'),
+(402,7002,'22-Aug-11','30-Sep-11','System Design','Completed'),
+(402,7004,'01-Oct-11',null,	'Coding','In Progress')
 
--- Inserting Data into ProjectTask Table
-insert into ProjectTask
-values(202,57501,'Coding','27-Apr-2012','19-Sep-2012','Completed'),
-(202,57502,'Coding','27-Apr-2012','19-Sep-2012','Completed'),
-(202,57503,'System Design','27-Apr-2012','19-Sep-2012','Completed'),
-(204,57505,'System Tester','24-Nov-2012','22-May-2013','Completed'),
-(204,57504,'System Design','24-Nov-2012','22-May-2013','Completed'),
-(203,57506,'Production Engg','21-Mar-2012','22-Aug-2012','Completed'),
-(203,57502,'Coding','21-Mar-2012','22-Aug-2012','Completed'),
-(203,57508,'System Design','21-Mar-2012','22-Aug-2012','Completed'),
-(201,57509,'Testing','19-Sep-2012','19-Apr-2013','In Progress'),
-(201,57510,'QA Mgmt','19-Sep-2012','19-Apr-2013','In Progress'),
-(204,57507,'System Analysis','24-Nov-2012','22-May-2013','Completed')
-
-select * from ProjectTask
+select* from ProjectTasks
