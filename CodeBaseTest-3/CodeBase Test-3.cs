@@ -40,11 +40,11 @@ namespace StoredProcedure
                 int res = cmd.ExecuteNonQuery();
                 if (res > 0)
                 {
-                    Console.WriteLine("");
+                    Console.WriteLine("Data Inserted successfully!");
                 }
                 else
                 {
-                    Console.WriteLine("");
+                    Console.WriteLine("Data not Updated!");
                 }
             }
             catch (SqlException e)
