@@ -1,0 +1,8 @@
+C:\Assignments\code base test-3\CodeBase_test_3\CodeBase_test_3\obj\Debug\CodeBase_test_3.csproj.AssemblyReference.cache
+C:\Assignments\code base test-3\CodeBase_test_3\CodeBase_test_3\obj\Debug\CodeBase_test_3.csproj.SuggestedBindingRedirects.cache
+C:\Assignments\code base test-3\CodeBase_test_3\CodeBase_test_3\obj\Debug\CodeBase_test_3.csproj.CoreCompileInputs.cache
+C:\Assignments\code base test-3\CodeBase_test_3\CodeBase_test_3\bin\Debug\CodeBase_test_3.exe.config
+C:\Assignments\code base test-3\CodeBase_test_3\CodeBase_test_3\bin\Debug\CodeBase_test_3.exe
+C:\Assignments\code base test-3\CodeBase_test_3\CodeBase_test_3\bin\Debug\CodeBase_test_3.pdb
+C:\Assignments\code base test-3\CodeBase_test_3\CodeBase_test_3\obj\Debug\CodeBase_test_3.exe
+C:\Assignments\code base test-3\CodeBase_test_3\CodeBase_test_3\obj\Debug\CodeBase_test_3.pdb
