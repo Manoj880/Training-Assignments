@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "format": 1,
   "restore": {
@@ -65,4 +66,73 @@
       }
     }
   }
+=======
+{
+  "format": 1,
+  "restore": {
+    "C:\\Assignments\\Web Technology\\Java Script\\JavaScript_Assignment\\JavaScript_Assignment\\JavaScript_Assignment.csproj": {}
+  },
+  "projects": {
+    "C:\\Assignments\\Web Technology\\Java Script\\JavaScript_Assignment\\JavaScript_Assignment\\JavaScript_Assignment.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Assignments\\Web Technology\\Java Script\\JavaScript_Assignment\\JavaScript_Assignment\\JavaScript_Assignment.csproj",
+        "projectName": "JavaScript_Assignment",
+        "projectPath": "C:\\Assignments\\Web Technology\\Java Script\\JavaScript_Assignment\\JavaScript_Assignment\\JavaScript_Assignment.csproj",
+        "packagesPath": "C:\\Users\\MY67603\\.nuget\\packages\\",
+        "outputPath": "C:\\Assignments\\Web Technology\\Java Script\\JavaScript_Assignment\\JavaScript_Assignment\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MY67603\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.22, 3.1.22]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+>>>>>>> 96ffd256c7a5cd6aa08a817f19cfaa91ab2c3d80
 }

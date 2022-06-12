@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Assignments\CaseStudy\CaseStudy\bin\Debug\CaseStudy.exe.config
 C:\Assignments\CaseStudy\CaseStudy\bin\Debug\CaseStudy.exe
 C:\Assignments\CaseStudy\CaseStudy\bin\Debug\CaseStudy.pdb
@@ -5,3 +6,12 @@ C:\Assignments\CaseStudy\CaseStudy\obj\Debug\CaseStudy.csproj.AssemblyReference.
 C:\Assignments\CaseStudy\CaseStudy\obj\Debug\CaseStudy.csproj.CoreCompileInputs.cache
 C:\Assignments\CaseStudy\CaseStudy\obj\Debug\CaseStudy.exe
 C:\Assignments\CaseStudy\CaseStudy\obj\Debug\CaseStudy.pdb
+=======
+C:\Assignments\CaseStudy\CaseStudy\bin\Debug\CaseStudy.exe.config
+C:\Assignments\CaseStudy\CaseStudy\bin\Debug\CaseStudy.exe
+C:\Assignments\CaseStudy\CaseStudy\bin\Debug\CaseStudy.pdb
+C:\Assignments\CaseStudy\CaseStudy\obj\Debug\CaseStudy.csproj.AssemblyReference.cache
+C:\Assignments\CaseStudy\CaseStudy\obj\Debug\CaseStudy.csproj.CoreCompileInputs.cache
+C:\Assignments\CaseStudy\CaseStudy\obj\Debug\CaseStudy.exe
+C:\Assignments\CaseStudy\CaseStudy\obj\Debug\CaseStudy.pdb
+>>>>>>> 96ffd256c7a5cd6aa08a817f19cfaa91ab2c3d80

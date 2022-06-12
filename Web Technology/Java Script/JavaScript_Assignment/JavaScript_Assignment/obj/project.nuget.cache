@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "version": 2,
   "dgSpecHash": "3qPAlltwIGpq1cZN0LV+HB8woBqVsP6eQIVdw2a/LbPb9m2My0pbXEZm5xo7x8Jk4qUcMYK/Zq2fSFs1qU5V2Q==",
@@ -7,4 +8,15 @@
     "C:\\Users\\MY67603\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
   ],
   "logs": []
+=======
+{
+  "version": 2,
+  "dgSpecHash": "3qPAlltwIGpq1cZN0LV+HB8woBqVsP6eQIVdw2a/LbPb9m2My0pbXEZm5xo7x8Jk4qUcMYK/Zq2fSFs1qU5V2Q==",
+  "success": true,
+  "projectFilePath": "C:\\Assignments\\Web Technology\\Java Script\\JavaScript_Assignment\\JavaScript_Assignment\\JavaScript_Assignment.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MY67603\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+  ],
+  "logs": []
+>>>>>>> 96ffd256c7a5cd6aa08a817f19cfaa91ab2c3d80
 }
