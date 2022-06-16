@@ -21,7 +21,8 @@
         <center><asp:Image ID="Image1" runat="server" height="300px" Width="550px" /></center>
         <br />
         <br />
-        <h2 style="color:white;"><center><asp:Label ID="Label1" runat="server" Text="Price Label"></asp:Label></center></h2>
+        <h2 style="color:white;"><center>Cost of selected item : <asp:Button ID="Price" runat="server" OnClick="Button1_Click1" style="margin-left: 43px" Text="Price" Width="119px"/>
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></center></h2>
     </form>
 </body>
 </html>

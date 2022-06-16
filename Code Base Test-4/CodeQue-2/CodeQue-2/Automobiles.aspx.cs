@@ -26,30 +26,35 @@ namespace CodeQue_2
         {
             string str = DropDownList1.Text;
             Image1.ImageUrl = "~/Pictures/" + str + ".JFIF";
+        }
+
+            protected void Button1_Click1(object sender, EventArgs e)
+            {
 
 
-            if (DropDownList1.Items.FindByText("Kawasaki H2r").Selected == true)
-            {
-                Label1.Text = "Price: 40,00,000/-";
-            }
-            else if (DropDownList1.Items.FindByText("triumph").Selected == true)
-            {
-                Label1.Text = "Price: 11,35,000/-";
-            }
-            else if (DropDownList1.Items.FindByText("lamborgini").Selected == true)
-            {
-                Label1.Text = "Price: 6,25,00,000/-";
-            }
-            else if (DropDownList1.Items.FindByText("Lykan Hypersport").Selected == true)
-            {
-                Label1.Text = "Price: 21,70,00,000/-";
-            }
-            else if (DropDownList1.Items.FindByText("Bugatti").Selected == true)
-            {
-                Label1.Text = "Price: 28,40,00,000/-";
+                if (DropDownList1.Items.FindByText("Kawasaki H2r").Selected == true)
+                {
+                    TextBox1.Text = "Price: 40,00,000/-";
+                }
+                else if (DropDownList1.Items.FindByText("triumph").Selected == true)
+                {
+                    TextBox1.Text = "Price: 11,35,000/-";
+                }
+                else if (DropDownList1.Items.FindByText("lamborgini").Selected == true)
+                {
+                    TextBox1.Text = "Price: 6,25,00,000/-";
+                }
+                else if (DropDownList1.Items.FindByText("Lykan Hypersport").Selected == true)
+                {
+                    TextBox1.Text = "Price: 21,70,00,000/-";
+                }
+                else if (DropDownList1.Items.FindByText("Bugatti").Selected == true)
+                {
+                    TextBox1.Text = "Price: 28,40,00,000/-";
+                }
             }
            
 
-        }
+        
     }
 }
